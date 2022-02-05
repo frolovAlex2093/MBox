@@ -1,0 +1,13 @@
+include ../title/title
+
+mixin films({text, pack, films, button})
+
+    .films
+        +title({text: text}) 
+        .films__items 
+            each film in films 
+                .films__item
+                    a(href="#") 
+                        img(src=require(`blocks/films/${pack}/${film}`), alt="films")
+        if(button)
+            button.films__button= button

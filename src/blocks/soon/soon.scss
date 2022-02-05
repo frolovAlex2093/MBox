@@ -1,0 +1,30 @@
+.soon{
+    display: flex;
+    margin: 0 0 121px;
+    cursor: pointer;
+    &__baner{
+        & img{
+            width: 100%;
+        }
+    }
+    &__soon{
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 860px){
+    .soon{
+        flex-direction: column;
+        &__baner{
+            border-radius: 40px;
+            overflow: hidden;
+        }
+        &__soon{
+            border-radius: 40px;
+            overflow: hidden;
+
+        }
+    }
+}

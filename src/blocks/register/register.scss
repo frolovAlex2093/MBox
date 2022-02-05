@@ -1,0 +1,63 @@
+.register {
+    background-image: url("img/reg-bg.png");
+    display: flex;
+   
+    margin: 0 0 121px;
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    &__text {
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 100%;
+        text-transform: capitalize;
+        margin: 0px 0px 0px 57px;
+    }
+    &__button {
+        padding: 0px 10px 0px 10px;
+        font-weight: 800;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 20px;
+        cursor: pointer;
+        width: 141px;
+        height: 50px;
+        background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+        color: white;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 152px 0px 0px;
+        &:hover {
+            box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+        }
+    }
+}
+
+@media(max-width: 966px){
+    .register{
+        &__text{
+            font-size: 54px;
+        }
+        &__button{
+            margin: 0px 35px 0px 0px;
+        }
+    }
+}
+@media(max-width: 780px){
+    .register{
+        flex-direction: column;
+        justify-content: start;
+        &__text{
+            margin: 30px 0px 25px 0px;
+            text-align: center;
+            font-size: 40px;
+        }
+        &__button{
+            margin: 0px 0px 20px 0px;
+        }
+    }
+}

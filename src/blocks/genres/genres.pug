@@ -1,0 +1,10 @@
+include ../title/title
+
+mixin genres({text})
+    .genres
+        +title({text: text}) 
+        .genres__items
+           - for (var i = 1; i < 9; i++)
+            .genres__item 
+                a(href="#")
+                    img(src=require(`blocks/genres/img/${i}-genres.png`), alt="") 

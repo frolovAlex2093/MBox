@@ -1,0 +1,21 @@
+include ../burger/burger
+
+mixin header()
+
+    header 
+        .header
+            .header__logo
+                img(src=require(`blocks/header/img/Logo.svg`), alt="logo")
+            nav.header__links
+                a(href="#" class="header__link active") Home
+                a(href="#" class="header__link") TV Shows
+                a(href="#" class="header__link") Movies
+                a(href="#" class="header__link") Series
+            .header__icons
+                a(href="#") 
+                    img(src=require(`blocks/header/img/lupa.svg`), alt="lupa")
+                a(href="#")
+                    img(src=require(`blocks/header/img/kolokol.svg`), alt="kolokol")
+                a(href="#")
+                    img(src=require(`blocks/header/img/user.svg`), alt="user")
+            +burger({links: ["Home", "TV Shows", "Movies", "Series"], icons: ["blocks/header/img/lupa.svg", "blocks/header/img/kolokol.svg", "blocks/header/img/user.svg"]})

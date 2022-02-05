@@ -1,0 +1,40 @@
+.genres {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 55px;
+    &__items {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+    &__item{
+        margin: 0px 0px 27px 0px;
+        &:hover{
+            filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
+        }
+    }
+    
+}
+
+@media(max-width: 1415px){
+    .genres{
+        &__items{
+            text-align: center;
+        }
+        &__item{
+            flex: 0 0 50%;
+        }
+        &__item img{
+            width: 75%;
+        }
+    }
+}
+@media(max-width: 756px){
+    .genres{
+        &__item{
+            flex: 1 1 100%;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.title{
+        width: fit-content;
+        margin: 0px 0px 40px 0px;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 20px;
+        color: #ffffff;
+        position: relative;
+        padding: 0px 0px 0px 20px;
+
+        &::before {
+            content: "";
+            width: 8px;
+            height: 35px;
+            background-image: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0px;
+            border-radius: 50px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg) translateY(-50%);
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+        }
+}
+
+@media(max-width: 500px){
+    .title{
+        font-size: 20px;
+    }
+}

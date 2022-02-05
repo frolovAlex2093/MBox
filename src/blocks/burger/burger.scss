@@ -1,0 +1,54 @@
+.burger {
+    position: relative;
+    cursor: pointer;
+    display: none;
+    &__1,
+    &__2,
+    &__3 {
+        width: 35px;
+        height: 5px;
+        background-color: #ffffff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change &__1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .change &__2 {
+        opacity: 0;
+    }
+    .change &__3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    &__links {
+        padding: 15px 0px 15px 15px;
+        width: 194px;
+        background-color: #000;
+        position: absolute;
+        left: -52px;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        display: none;
+
+        .change &{
+            display: flex;
+        }
+    }
+    &__links a {
+        cursor: pointer;
+        color: white;
+        position: relative;
+        padding-bottom: 7px;
+        transition: 0.2s ease;
+    }
+}
+
+@media (max-width: 925px) {
+    .burger {
+        display: block;
+    }
+}

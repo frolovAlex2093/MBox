@@ -1,0 +1,28 @@
+extends ../main/main
+
+include ../../blocks/header/header
+include ../../blocks/preview/preview
+include ../../blocks/films/films
+include ../../blocks/genres/genres
+include ../../blocks/actors/actors
+include ../../blocks/soon/soon
+include ../../blocks/register/register
+include ../../blocks/footer/footer
+
+
+block header     
+    +header()
+
+block content 
+    +preview()
+    +films({text: "Trending TV Shows",pack: "img1", films: ["1.png","2.png","3.png","4.png","5.png","6.png"], button: false})
+    +films({text: "Trending Movies",pack: "img2", films: ["1-2.png","2-2.png","3-2.png","4-2.png","5-2.png","6-2.png"], button: "See more"})
+    +genres({text: "Popular Genres", items: 8})
+    +actors({text: "Popular Actors & Directors", actors: [{number: "1", name: "Samantha Bowen"}, {number: "2", name: "Rhys Birch"},{number: "3", name: "James Holloway"},
+        {number: "4", name: "Joshua Walton"},{number: "5", name: "Patrick Elliott"},{number: "6", name: "Morgan O'Neill"}]})
+
+    +soon({})
+    +register({})
+block footer
+    
+    +footer({})

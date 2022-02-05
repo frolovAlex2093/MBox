@@ -1,0 +1,13 @@
+include ../title/title
+
+mixin actors({text, actors})
+
+    .actors
+        +title({text: text})
+        .actors__items 
+            each actor in actors
+                .actors__item 
+                    .actors__img 
+                        a(href="#") 
+                            img(src=require(`blocks/actors/img/actor-${actor.number}`), alt="actor")
+                    .actors__name= actor.name
