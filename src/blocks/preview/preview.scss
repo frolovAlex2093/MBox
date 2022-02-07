@@ -1,5 +1,4 @@
 .preview {
-   
     display: flex;
     padding: 14px 0px 0px 84px;
     border-bottom: 2px #2f2e2e solid;
@@ -13,6 +12,9 @@
         position: relative;
         z-index: 2;
         box-shadow: 100px 0px 100px #000000;
+        -webkit-appearance: none;
+        -webkit-box-shadow: 100px 0px 100px #000000;
+        -moz-box-shadow: 100px 0px 100px #000000;
     }
     &__title {
         font-family: "Marcellus", serif;
@@ -129,43 +131,42 @@
     }
 }
 
-
-@media(max-width: 1340px){
-    .preview{
+@media (max-width: 1340px) {
+    .preview {
         padding-left: 0px;
         align-items: center;
 
-        &__info{
+        &__info {
             padding: 0px 0px 0px 0px;
         }
     }
 }
-@media(max-width: 1100px){
-    .preview{
+@media (max-width: 1100px) {
+    .preview {
         flex-direction: column-reverse;
         align-items: center;
-        &__info{
+        &__info {
             text-align: center;
             align-items: center;
             box-shadow: 0px -20px 20px 0px #000000;
             width: 100%;
             max-width: none;
             padding: 0px 0px 15px 0px;
+            -webkit-appearance: none;
+            -webkit-box-shadow: 0px -20px 20px 0px #000000;
+            -moz-box-shadow: 0px -20px 20px 0px #000000;
         }
-        &__rating{
+        &__rating {
             padding-right: 40px;
         }
-        &__buttons{
+        &__buttons {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            &-watch{
+            &-watch {
                 margin: 0px 0px 10px 0px;
             }
         }
     }
 }
 
-
-
-// 0px -20px 20px 0px #000000

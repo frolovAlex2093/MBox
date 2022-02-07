@@ -8,6 +8,10 @@ const TerserPlugin = require("terser-webpack-plugin");
 const fs = require('fs');
 const webpack = require('webpack');
 
+var ghpages = require('gh-pages');
+
+ghpages.publish('dist', function(err) {});
+
 
 
 const isDev = process.env.NODE_ENV === "development"
