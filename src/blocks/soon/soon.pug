@@ -2,6 +2,10 @@ mixin soon({})
 
     .soon       
         .soon__baner 
-            img(src=require("blocks/soon/img/baner-2.png"), alt="baner")
+            picture
+                source(type='image/webp' srcset='assets/images/baner-2.webp')
+                img(src=require("blocks/soon/img/baner-2.png"), alt="baner-2")
         .soon__soon
-            img(src=require("blocks/soon/img/soon.png"), alt="soon")
+            picture
+                source(type='image/webp' srcset='assets/images/soon.webp')
+                img(src=require("blocks/soon/img/soon.png"), alt="soon")

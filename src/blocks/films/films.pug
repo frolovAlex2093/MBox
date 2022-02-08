@@ -7,7 +7,10 @@ mixin films({text, pack, films, button})
         .films__items 
             each film in films 
                 .films__item
-                    a(href="#") 
-                        img(src=require(`blocks/films/${pack}/${film}`), alt="films")
+                    a(href="#")
+                        picture
+                            source(type='image/webp' srcset=`assets/images/${film}.webp`)
+                            img(src=require(`blocks/films/${pack}/${film}.png`), alt="films") 
+                        
         if(button)
             button.films__button= button

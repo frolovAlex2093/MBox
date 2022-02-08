@@ -8,6 +8,8 @@ mixin actors({text, actors})
             each actor in actors
                 .actors__item 
                     .actors__img 
-                        a(href="#") 
-                            img(src=require(`blocks/actors/img/actor-${actor.number}`), alt="actor")
+                        a(href="#")
+                            picture
+                                source(type='image/webp' srcset=`assets/images/actor-${actor.number}.webp`)
+                                img(src=require(`blocks/actors/img/actor-${actor.number}.png`), alt="actor")
                     .actors__name= actor.name

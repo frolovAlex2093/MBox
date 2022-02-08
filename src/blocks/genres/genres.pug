@@ -7,4 +7,6 @@ mixin genres({text})
            - for (var i = 1; i < 9; i++)
             .genres__item 
                 a(href="#")
-                    img(src=require(`blocks/genres/img/${i}-genres.png`), alt="") 
+                    picture
+                        source(type='image/webp' srcset=`assets/images/${i}-genres.webp`)
+                        img(src=require(`blocks/genres/img/${i}-genres.png`), alt="genres") 

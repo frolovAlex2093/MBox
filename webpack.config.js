@@ -7,6 +7,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const fs = require('fs');
 const webpack = require('webpack');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const { extendDefaultPlugins } = require("svgo");
+
 
 var ghpages = require('gh-pages');
 
@@ -32,7 +36,19 @@ const optimization = () => {
     if (isProd){
         config.minimizer = [
             new CssMinimizerPlugin(),
-            new TerserPlugin()
+            new TerserPlugin(),
+            new ImageMinimizerPlugin({
+                minimizer: {
+                    implementation: ImageMinimizerPlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                        ["gifsicle", { interlaced: true }],
+                        ["jpegtran", { progressive: true }],
+                        ["optipng", { optimizationLevel: 5 }]
+                        ]
+                    }
+                }
+            })
         ]
         return config
     }
@@ -87,7 +103,8 @@ module.exports = {
             filename: `${page}.html`,
             template: `${PAGES_DIR}/${page}/${page}.pug`,
             
-        }))
+        })),
+        new ImageminWebpWebpackPlugin()
     ],
     module: {
         rules: [
