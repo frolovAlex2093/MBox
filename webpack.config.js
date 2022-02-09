@@ -9,7 +9,6 @@ const fs = require('fs');
 const webpack = require('webpack');
 const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const { extendDefaultPlugins } = require("svgo");
 
 
 var ghpages = require('gh-pages');
